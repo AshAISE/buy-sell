@@ -8,40 +8,26 @@
 </head>
 <body>
     <div class="container">
-        <h1>Travel Money Exchange</h1>
-        <div class="exchange-container">
-            <div class="exchange-box">
-                <h2>Buy Currency</h2>
-                <form id="buy-form">
-                    <label for="buy-amount">Amount in GBP:</label>
-                    <input type="number" id="buy-amount" name="buy-amount" required>
-                    <label for="buy-currency">Currency:</label>
-                    <select id="buy-currency" name="buy-currency" required>
-                        <option value="USD">USD</option>
-                        <option value="EUR">EUR</option>
-                        <!-- Add more currencies as needed -->
-                    </select>
-                    <button type="submit">Calculate</button>
-                </form>
-                <p id="buy-result"></p>
-            </div>
-            <div class="exchange-box">
-                <h2>Sell Currency</h2>
-                <form id="sell-form">
-                    <label for="sell-amount">Amount in Currency:</label>
-                    <input type="number" id="sell-amount" name="sell-amount" required>
-                    <label for="sell-currency">Currency:</label>
-                    <select id="sell-currency" name="sell-currency" required>
-                        <option value="USD">USD</option>
-                        <option value="EUR">EUR</option>
-                        <!-- Add more currencies as needed -->
-                    </select>
-                    <button type="submit">Calculate</button>
-                </form>
-                <p id="sell-result"></p>
-            </div>
+        <h1>Buy/Sell Travel Money</h1>
+        <div class="form-group">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" placeholder="Enter amount">
         </div>
+        <div class="form-group">
+            <label for="currency">Currency:</label>
+            <select id="currency">
+                <!-- Add more currency options as needed -->
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button onclick="getRates('buy')">Buy</button>
+            <button onclick="getRates('sell')">Sell</button>
+        </div>
+        <div id="result"></div>
     </div>
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
