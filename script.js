@@ -1,7 +1,13 @@
-async function getRates(type) {
+async function convertCurrency() {
     const amount = document.getElementById('amount').value;
-    const currency = document.getElementById('currency').value;
-    const response = await fetch(`/api/rates?amount=${amount}&currency=${currency}&type=${type}`);
+    const fromCurrency = document.getElementById('fromCurrency').value;
+    const toCurrency = document.getElementById('toCurrency').value;
+
+    const response = await fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`);
     const data = await response.json();
-    document.getElementById('result').innerText = `${type.charAt(0).toUpperCase() + type.slice(1)} Rate: ${data.rate}`;
+
+    const rate = data.rates[toCurrency];
+    const convertedAmount = (amount * rate).toFixed(2);
+
+    document.getElementById('result').innerText = `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`;
 }
