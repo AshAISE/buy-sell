@@ -3,28 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Money Exchange</title>
+    <title>Currency Converter</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Buy/Sell Travel Money</h1>
+        <h1>Currency Converter</h1>
         <div class="form-group">
             <label for="amount">Amount:</label>
             <input type="number" id="amount" placeholder="Enter amount">
         </div>
         <div class="form-group">
-            <label for="currency">Currency:</label>
-            <select id="currency">
-                <!-- Add more currency options as needed -->
+            <label for="fromCurrency">From:</label>
+            <select id="fromCurrency">
                 <option value="USD">USD</option>
                 <option value="EUR">EUR</option>
                 <option value="GBP">GBP</option>
+                <option value="JPY">JPY</option>
             </select>
         </div>
         <div class="form-group">
-            <button onclick="getRates('buy')">Buy</button>
-            <button onclick="getRates('sell')">Sell</button>
+            <label for="toCurrency">To:</label>
+            <select id="toCurrency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="JPY">JPY</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button onclick="convertCurrency()">Convert</button>
         </div>
         <div id="result"></div>
     </div>
