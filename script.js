@@ -3,8 +3,8 @@ async function convertCurrency() {
     const fromCurrency = document.getElementById('fromCurrency').value;
     const toCurrency = document.getElementById('toCurrency').value;
     
-const response = await fetch(`https://api.exchangerate1-api.com/v4/latest/${fromCurrency}`);
-    //const response = await fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`);
+
+    const response = await fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`);
     const data = await response.json();
 
     const rate = data.rates[toCurrency];
