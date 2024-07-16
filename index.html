@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Money Exchange</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Travel Money Exchange</h1>
+        <div class="exchange-container">
+            <div class="exchange-box">
+                <h2>Buy Currency</h2>
+                <form id="buy-form">
+                    <label for="buy-amount">Amount in GBP:</label>
+                    <input type="number" id="buy-amount" name="buy-amount" required>
+                    <label for="buy-currency">Currency:</label>
+                    <select id="buy-currency" name="buy-currency" required>
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <!-- Add more currencies as needed -->
+                    </select>
+                    <button type="submit">Calculate</button>
+                </form>
+                <p id="buy-result"></p>
+            </div>
+            <div class="exchange-box">
+                <h2>Sell Currency</h2>
+                <form id="sell-form">
+                    <label for="sell-amount">Amount in Currency:</label>
+                    <input type="number" id="sell-amount" name="sell-amount" required>
+                    <label for="sell-currency">Currency:</label>
+                    <select id="sell-currency" name="sell-currency" required>
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <!-- Add more currencies as needed -->
+                    </select>
+                    <button type="submit">Calculate</button>
+                </form>
+                <p id="sell-result"></p>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
