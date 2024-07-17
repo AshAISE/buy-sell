@@ -2,7 +2,25 @@
 <html lang="en">
 <head>
 
-    
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+
+    <div id="mydiv"></div>
+
+    <script type="text/babel">
+      function Conversion() {
+        return <h1>Enjoy the great rates</h1>;
+      }
+      
+      const container = document.getElementById('mydiv');
+      const root = ReactDOM.createRoot(container);
+      root.render(<Hello />)
+    </script>
+
+      
 <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,23 +46,7 @@
   </div>
 </div>
 
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  </head>
-  <body>
-
-    <div id="mydiv"></div>
-
-    <script type="text/babel">
-      function Hello() {
-        return <h1>Hello World!</h1>;
-      }
-      
-      const container = document.getElementById('mydiv');
-      const root = ReactDOM.createRoot(container);
-      root.render(<Hello />)
-    </script>
+   
     
     
     <meta charset="UTF-8">
@@ -54,7 +56,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Currency Converter</h1>
+        <h2>Currency Converter</h2>
         <div class="form-group">
             <label for="amount">Amount:</label>
             <input type="number" id="amount" placeholder="Enter amount">
